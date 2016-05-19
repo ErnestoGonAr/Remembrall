@@ -25,7 +25,8 @@ public class BdHandler  extends SQLiteOpenHelper {
                 "NombreObjeto TEXT," +
                 "DescripcionObjeto TEXT" +
                 "FechaP DATE," +
-                "FechaD DATE)";
+                "FechaD DATE," +
+                "Status)";
 
         db.execSQL(crearTabla);
 
@@ -41,10 +42,33 @@ public class BdHandler  extends SQLiteOpenHelper {
     }
 
     public void insertar(SQLiteDatabase db, String[] data){
-        String insert = ("INSERT INTO Prestamo (NombrePersona, NombreObjeto, DescripcionObjeto, FechaP, FechaD)" +
-                "VALUES ("+data[0]+","+data[1]+","+data[2]+","+data[3]+","+data[4]+");");
+        String insert = ("INSERT INTO Prestamo (NombrePersona, NombreObjeto, DescripcionObjeto, FechaP, FechaD, Status)" +
+                "VALUES ("+data[0]+","+data[1]+","+data[2]+","+data[3]+","+data[4]+","+data[5]+");");
 
         db.execSQL(insert);
+    }
+
+    public void eliminar(SQLiteDatabase db, int id){
+        String delete = "DELETE FROM Prestamo WHERE id="+id;
+
+        db.execSQL(delete);
+    }
+
+    public void actualizarStatus(SQLiteDatabase db, int id,String status){
+        String updateStatus= ("UPDATE Prestamo SET status = "+status + "WHERE id = "+id);
+
+        db.execSQL(updateStatus);
+    }
+
+    public void actualizarDatos(SQLiteDatabase db, int id, String[] data){
+        String updateData = ("UPDATE Prestamo SET NombrePersona= "+data[0]+
+                ", Nombre Objeto = "+data[1]+
+        ", DescripcionObjeto = "+data[2]+
+        ", FechaP = "+data[3]+
+        ", FechaD = "+data[4]+
+        ", status = "+data[5]+");");
+
+        db.execSQL(updateData);
     }
 
 }
