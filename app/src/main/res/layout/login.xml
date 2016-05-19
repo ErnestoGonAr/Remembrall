@@ -6,91 +6,107 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#ef2536"
-    tools:context="com.example.myapplication.MainActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remembrall "
-        android:textColor="#082ce2"
+android:background="@drawable/"
+    android:scaleType="centerCrop"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Remembrall"
+    android:textColor="#082ce2"
 
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:id="@+id/remb"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acceder"
-        android:textColor="#6b79c2"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:id="@+id/acc"
-        android:layout_below="@+id/remb"
-        android:layout_centerHorizontal="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Aun no tienes cuenta?"
-        android:textSize="12sp"
-        android:id="@+id/ques"
-        android:layout_alignParentLeft="true"
-        android:layout_alignEnd="@+id/pass"
-        android:layout_below="@+id/pass"
-        android:layout_alignStart="@+id/reg" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="REGISTRATE"
-        android:textSize="12sp"
-        android:id="@+id/reg"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_toStartOf="@+id/acc"
-        android:layout_alignEnd="@+id/acc" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Usuario"
-        android:textColor="#082ce2"
-        android:textSize="24sp"
-        android:id="@+id/user"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/pass" />
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/user"
-        android:layout_above="@+id/pass"
-        android:id="@+id/cb1" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contraseña"
-        android:textColor="#082ce2"
-        android:textSize="24sp"
-        android:id="@+id/pass"
-        android:layout_below="@+id/user"
-        android:layout_marginTop="64dp" />
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:password="true"
-        android:layout_alignBottom="@+id/pass"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/user"
-        android:id="@+id/cb2" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ingresa"
-        android:background="#50b7d1"
+    android:textSize="48sp"
+    android:textStyle="bold"
+    android:id="@+id/remb"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Acceder"
+android:textColor="#6b79c2"
+android:textSize="36sp"
+android:textStyle="bold"
+android:id="@+id/acc"
+android:layout_below="@+id/remb"
+android:layout_centerHorizontal="true" />
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="¿Aun no tienes cuenta?"
+android:textSize="12sp"
+android:id="@+id/ques"
+android:layout_alignParentLeft="true"
 
-        android:id="@+id/button"
-        android:textStyle="bold"
-        android:layout_below="@+id/ques"
-        android:layout_alignEnd="@+id/cb2" />
+android:layout_alignEnd="@+id/cb2"
+android:paddingTop="16dp"
+android:layout_below="@+id/pass"
+android:layout_alignStart="@+id/reg" />
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:text="REGISTRATE"
+android:textStyle="bold"
+android:textSize="12sp"
+android:textColor="#3abfe7"
+android:id="@+id/reg"
+android:paddingTop="12dp"
+android:paddingLeft="16dp"
 
-</RelativeLayout>
+android:layout_below="@+id/ques"
+android:layout_alignParentLeft="true"
+android:layout_toStartOf="@+id/acc"
+android:layout_alignEnd="@+id/acc" />
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Usuario"
+android:textColor="#082ce2"
+android:textSize="24sp"
+android:id="@+id/user"
+android:layout_centerVertical="true"
+android:layout_alignEnd="@+id/pass" />
+<EditText
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentEnd="true"
+android:layout_toEndOf="@+id/user"
+android:layout_above="@+id/pass"
+android:id="@+id/cb1" />
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Contraseña"
+android:textColor="#082ce2"
+android:textSize="24sp"
+android:id="@+id/pass"
+android:layout_below="@+id/user"
+android:layout_marginTop="64dp" />
+<EditText
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:password="true"
+android:layout_alignBottom="@+id/pass"
+android:layout_alignParentEnd="true"
+android:layout_toEndOf="@+id/user"
+android:id="@+id/cb2" />
+<Button
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Ingresa"
+android:background="#50b7d1"
+
+android:id="@+id/button"
+android:textStyle="bold"
+android:layout_below="@+id/ques"
+android:layout_alignEnd="@+id/cb2" />
+
+<ProgressBar
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/progressBar"
+android:layout_above="@+id/cb1"
+android:layout_alignStart="@+id/remb" />
+
+    </RelativeLayout>
