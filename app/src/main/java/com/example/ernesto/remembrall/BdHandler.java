@@ -1,7 +1,8 @@
-/**
+package com.example.ernesto.remembrall; /**
  * Created by ernesto on 11/05/16.
  */
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -98,11 +99,19 @@ public class BdHandler  extends SQLiteOpenHelper {
 
     //*******************CONSULTAS EN LA BD**************
 
-    public String[] getPrestamos(SQLiteDatabase db){
-        String  getPrestamos = "SELECT * FROM Prestamo ";
-        String[] data = new String[7];
-        return data;
+    private Cursor getPrestamos(SQLiteDatabase db){
+        String tabla="Usuario";
+        String[] columnas = new String[] {"NombrePersona", "NombreObjeto", "DescripcionObjeto", "FechaP", "FechaD", "Status"};
+        String where = null;
+        String[] args =null;
+        String groupBy = null;
+        String having=null;
+        String orderBy= null;
+        String limit= "100";
+
+        return db.query(tabla, columnas, where, args, groupBy, having, orderBy, limit);
     }
+
 
 }
 
