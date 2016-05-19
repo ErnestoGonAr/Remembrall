@@ -19,7 +19,7 @@ public class BdHandler  extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //Creacion de las tablas que vamos a utilizar
 
-        String crearTabla = "CREATE TABLE Prestamo " +
+        String crearTablaP = "CREATE TABLE Prestamo " +
                 "(idPrestamo INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "NombrePersona TEXT," +
                 "NombreObjeto TEXT," +
@@ -28,7 +28,17 @@ public class BdHandler  extends SQLiteOpenHelper {
                 "FechaD DATE," +
                 "Status)";
 
-        db.execSQL(crearTabla);
+        String crearTablaU = "CREATE TABLE Usuario "+
+                "(idUsuario INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                "NombreUsuario TEXT, "+
+                "Pass TEXT);";
+
+        String crearTablaPU = "CREATE TABLE Prestamo_Usuario "+
+                "(idUsuario INTEGER FOREIGN KEY, idPrestamo INTEGER FOREIGN KEY)";
+
+        db.execSQL(crearTablaP);
+        db.execSQL(crearTablaU);
+        db.execSQL(crearTablaPU);
 
     }
 
@@ -41,26 +51,40 @@ public class BdHandler  extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void insertar(SQLiteDatabase db, String[] data){
-        String insert = ("INSERT INTO Prestamo (NombrePersona, NombreObjeto, DescripcionObjeto, FechaP, FechaD, Status)" +
+    //************OPERACIONES EN LA BD***********************
+
+    public void insertarP(SQLiteDatabase db,int usuario, String[] data){
+        String insertP = ("INSERT INTO Prestamo (NombrePersona, NombreObjeto, DescripcionObjeto, FechaP, FechaD, Status)" +
                 "VALUES ("+data[0]+","+data[1]+","+data[2]+","+data[3]+","+data[4]+","+data[5]+");");
+        String insertPU =("INSERT INTO Prestamo_Usuario (idPrestamo, idUsuario)" +
+                "VALUES ("+"el idPrestamo"+","+usuario+");"); ///Falta poner que Prestamo le va a agregar
+
+        db.execSQL(insertP);
+        db.execSQL(insertPU);
+    }
+
+    public void insertarU(SQLiteDatabase db, String[] data){
+        String insert = ("INSERT INTO Usuario (NombreUsuario, Pass)" +
+                "VALUES ("+data[0]+","+data[1]+");");
 
         db.execSQL(insert);
     }
 
     public void eliminar(SQLiteDatabase db, int id){
-        String delete = "DELETE FROM Prestamo WHERE id="+id;
+        String deleteP = "DELETE FROM Prestamo WHERE idPrestamo="+id+");";
+        String deletePU = "DELETE FROM Prestamo_Usuario WHERE idPrestamo="+id+");";
 
-        db.execSQL(delete);
+        db.execSQL(deleteP);
+        db.execSQL(deletePU);
     }
 
     public void actualizarStatus(SQLiteDatabase db, int id,String status){
-        String updateStatus= ("UPDATE Prestamo SET status = "+status + "WHERE id = "+id);
+        String updateStatus= "UPDATE Prestamo SET status = "+status + "WHERE id = "+id+");";
 
         db.execSQL(updateStatus);
     }
 
-    public void actualizarDatos(SQLiteDatabase db, int id, String[] data){
+    public void actualizarDatosPrestamo(SQLiteDatabase db, int id, String[] data){
         String updateData = ("UPDATE Prestamo SET NombrePersona= "+data[0]+
                 ", Nombre Objeto = "+data[1]+
         ", DescripcionObjeto = "+data[2]+
@@ -69,6 +93,14 @@ public class BdHandler  extends SQLiteOpenHelper {
         ", status = "+data[5]+");");
 
         db.execSQL(updateData);
+    }
+
+    //*******************CONSULTAS EN LA BD**************
+
+    public String[] getPrestamos(SQLiteDatabase db){
+        String  getPrestamos = "SELECT * FROM Prestamo ";
+        String[] data = new String[7];
+        return data;
     }
 
 }
