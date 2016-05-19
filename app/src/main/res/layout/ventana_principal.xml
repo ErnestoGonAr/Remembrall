@@ -7,21 +7,40 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.myapplication.MainActivity"
     android:visibility="visible"
+    android:background="@drawable/fondo1"
+    android:scaleType="centerCrop"
     >
     <TextView
-        android:id="@+id/User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remembrall "
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="36dp"/>
+
+    <TextView
+        android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:textAppearance="?android:textAppearanceLarge"
-        android:text="Nombre de Usuario"
-        android:textColor="#8e32b6"
+        android:text="Betsy Sanchez"
+        android:textColor="#1836b1"
         android:textStyle="bold"
         android:textColorHint="#f5f50b"
-        android:textSize="26sp"/>
-    <TextView
+        android:textSize="18sp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/perfil"
+        android:layout_toLeftOf="@id/user"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentTop="true"/>
+    <Button
         android:id="@+id/Con"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,33 +48,22 @@
         android:layout_alignParentBottom="true"
         android:textAppearance="?android:textAppearanceLarge"
         android:text="Consultar"
-        android:textSize="26sp"/>
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="36dp"
+        android:textSize="20sp"/>
 
-    <TextView
+    <Button
         android:id="@+id/Np"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceLarge"
         android:layout_above="@id/Con"
         android:text="Nuevo Prestamo"
-        android:textSize="26sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="20sp"
         />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/boton_hacia_consulta"
-        android:text="prestamos"
-        android:layout_marginBottom="71dp"
-        android:layout_above="@+id/Np"
-        android:layout_toStartOf="@+id/boton_hacia_nuevo_prestamo"
-        android:layout_marginEnd="34dp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/boton_hacia_nuevo_prestamo"
-        android:text="nuevo prestamo"
-        android:layout_alignTop="@+id/boton_hacia_consulta"
-        android:layout_toEndOf="@+id/Np" />
+
 
 
 
