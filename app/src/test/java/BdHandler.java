@@ -34,7 +34,8 @@ public class BdHandler  extends SQLiteOpenHelper {
                 "Pass TEXT);";
 
         String crearTablaPU = "CREATE TABLE Prestamo_Usuario "+
-                "(idUsuario INTEGER FOREIGN KEY, idPrestamo INTEGER FOREIGN KEY)";
+                "(FOREIGN KEY(id_Usuario) REFERENCES Usuario(idUsuario),+" +
+                "FOREIGN KEY(id_Prestamo) REFERENCES Prestamo(idPrestamo);";
 
         db.execSQL(crearTablaP);
         db.execSQL(crearTablaU);
