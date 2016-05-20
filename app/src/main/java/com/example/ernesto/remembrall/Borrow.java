@@ -2,6 +2,11 @@ package com.example.ernesto.remembrall;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 import static com.example.ernesto.remembrall.R.layout.borrow;
 
@@ -15,4 +20,5 @@ public class Borrow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(borrow);
     }
+
 }
