@@ -22,7 +22,7 @@ public class Ventana_principal extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(ventana_principal);
 
-        final Button boton1 = (Button) findViewById(R.id.boton_hacia_consulta);
+        final Button boton1 = (Button) findViewById(R.id.Con);
 
         boton1.setOnClickListener(new View.OnClickListener() {
 
@@ -33,7 +33,7 @@ public class Ventana_principal extends AppCompatActivity{
             }
 
         });
-        final Button boton2 = (Button) findViewById(R.id.boton_hacia_nuevo_prestamo);
+        final Button boton2 = (Button) findViewById(R.id.Np);
 
         boton2.setOnClickListener(new View.OnClickListener() {
 
