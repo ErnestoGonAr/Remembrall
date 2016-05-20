@@ -1,6 +1,7 @@
 package com.example.ernesto.remembrall;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import static com.example.ernesto.remembrall.R.layout.login;
 public class MainActivity extends AppCompatActivity {
     EditText txtContraseña;
     EditText txtUsuario;
+
+    BdHandler bd = new BdHandler(this);
 
     Button btnSend;
     Toast toast1;
