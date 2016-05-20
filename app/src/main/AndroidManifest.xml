@@ -15,6 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Ventana_principal"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".HandlerConsulta"
+            android:parentActivityName=".Ventana_principal"></activity>
+        <activity android:name=".vistaconsulta"
+            android:parentActivityName=".HandlerConsulta"></activity>
+        <activity android:name=".Borrow"
+            android:parentActivityName=".Ventana_principal"></activity>
+
     </application>
 
 </manifest>

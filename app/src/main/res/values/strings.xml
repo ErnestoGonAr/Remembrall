@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Remembrall</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
 </resources>

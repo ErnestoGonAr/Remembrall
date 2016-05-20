@@ -9,94 +9,94 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:id="@+id/DateBrah"
-        android:text="heres your date bro"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/Nombre"
-        android:hint="Nombre"
-        android:focusable="true"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/DateBrah"
-        android:layout_toLeftOf="@id/DateBrah"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:text="Nombre"
+        android:textSize="20sp"
+        android:textColor="#F44336"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentLeft="true" />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/Producto"
+        android:layout_toEndOf="@+id/Nombre"
+        android:id="@+id/editText" />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Producto"
-        android:hint="Producto y Descripcion"
-        android:focusable="true"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        android:layout_marginTop="46dp"
+        android:text="Producto"
+        android:textSize="20sp"
+        android:textColor="#F44336"
+        android:layout_marginTop="40dp"
         android:layout_below="@+id/Nombre"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Days"
-        android:hint="Days"
-        android:focusable="true"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/Producto"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true" />
 
+
+         />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/p"
+        android:layout_alignBottom="@+id/Producto"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStartOf="@id/Producto"
+        android:layout_toEndOf="@+id/Producto" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Weeks"
-        android:hint="Weeks"
-        android:focusable="true"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/Days"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true" />
+        android:id="@+id/Carac"
+        android:text="Caracteristicas"
+        android:textSize="20sp"
+        android:textColor="#F44336"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/Producto"
+
+
+        />
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Months"
-        android:hint="Months"
-        android:focusable="true"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/Weeks"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/DatePicker"
-        android:hint="Date in particular?"
-        android:focusable="true"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        android:layout_alignTop="@+id/Days"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/c"
+        android:layout_alignBottom="@+id/Carac"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStartOf="@id/Carac"
+        android:layout_toEndOf="@+id/Carac" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        android:layout_below="@+id/Carac"
+        tools:context=".MainActivity" >
+
+        <EditText
+            android:id="@+id/etxt_fromdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:hint="@string/from_date"
+            android:textColorHint="#F44336"/>
+
+        <EditText
+            android:id="@+id/etxt_todate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:textColorHint="#F44336"
+            android:hint="@string/to_date" />
+    </LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"

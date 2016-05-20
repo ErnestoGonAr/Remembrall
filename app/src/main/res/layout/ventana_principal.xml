@@ -7,9 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.myapplication.MainActivity"
     android:visibility="visible"
-    android:background="#00BFA5">
+    >
     <TextView
         android:id="@+id/User"
         android:layout_width="wrap_content"
@@ -41,7 +40,22 @@
         android:text="Nuevo Prestamo"
         android:textSize="26sp"
         />
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boton_hacia_consulta"
+        android:text="prestamos"
+        android:layout_marginBottom="71dp"
+        android:layout_above="@+id/Np"
+        android:layout_toStartOf="@+id/boton_hacia_nuevo_prestamo"
+        android:layout_marginEnd="34dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boton_hacia_nuevo_prestamo"
+        android:text="nuevo prestamo"
+        android:layout_alignTop="@+id/boton_hacia_consulta"
+        android:layout_toEndOf="@+id/Np" />
 
 
 
